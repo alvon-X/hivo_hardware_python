@@ -11,6 +11,7 @@ faceDetectorObj = alvonCV.FaceDetector()
 while True:
     success, img = cap.read()
     img, bboxs = faceDetectorObj.findFaces(img, draw=True)
+    print(bboxs)
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
